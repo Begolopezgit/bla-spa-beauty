@@ -1,0 +1,9 @@
+.main__container {
+  & img {
+    width: 73%;
+    position: absolute;
+    top: 20px;
+    left: 340px;
+    z-index: 0;
+  }
+}

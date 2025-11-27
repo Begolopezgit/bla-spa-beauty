@@ -1,0 +1,62 @@
+@use "../abstracts/mixins" as mx;
+@use "../abstracts/variables" as va;
+
+.header {
+  margin-top: 30px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo img {
+    max-width: 190px;
+  }
+  &__nav {
+    z-index: 1;
+    margin-right: 150px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        @include mx.reset-list();
+        padding-left: 25px;
+      }
+      a {
+        text-decoration: none;
+      }
+      select {
+        z-index: 1;
+        border: none;
+        background-color: va.$grey-light;
+      }
+    }
+  }
+  &__icons {
+    z-index: 1;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a img {
+      width: 28px;
+      margin-left: 30px;
+      &.header__icons-bag {
+        width: 20px;
+      }
+    }
+  }
+  &__login {
+    z-index: 1;
+    margin-right: 20px;
+
+    &-button {
+      @include mx.button();
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
